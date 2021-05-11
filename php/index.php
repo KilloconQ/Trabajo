@@ -12,7 +12,7 @@
    <div class = "container-fluid cabecera" style = "height:200px">
     <div class="container">    
         <h1 class="titulo">BASS Cleaf</h1>
-        <p id="slogan">Tu boutique del bajo eléctrico</p> 
+        <h2 id="slogan">Tu boutique del bajo eléctrico</h2> 
     </div>
    </div> 
    <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset="197">

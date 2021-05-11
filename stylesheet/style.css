@@ -1,6 +1,5 @@
-#slogan {
+h2 {
     font-family: 'Jazz LET';
-    font-size: 30px;
     text-align: center;
 }
 
@@ -8,4 +7,8 @@
     font-family: 'Jazz LET';
     font-size: 50px;
     text-align: center;
+}
+
+.container {
+    padding-top: 20px;
 }
