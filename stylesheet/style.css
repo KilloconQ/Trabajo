@@ -8,12 +8,14 @@ a {
     font-size: 20px;
 }
 
-img {
-    padding-left: 10px;
-}
-
 #logo {
     padding: 10 10 10 10;
+}
+
+.advanced-banner-content {
+    padding-left: 50px;
+    height: 500px;
+    width: 700px;
 }
 
 .titulo {

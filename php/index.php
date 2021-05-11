@@ -63,8 +63,8 @@
     </div>
    </nav>
    <section class="main container">
-       <div class="advanced-banner-content" style="min-height: 600px;">
-
+       <div class="advanced-banner-content" style="min-height: 700px">
+            <img src="../images/bajista.jpg" alt="Bajista">
        </div>
    </section>
 </body>
