@@ -67,5 +67,14 @@
             <img src="../images/bajista.jpg" alt="Bajista">
        </div>
    </section>
+   <hr class="solid">
+   <article class="team clearfix">
+       <h2>¿Quienes somos?</h2>
+          <p>Somos una tienda especializada en el intrumento superior, aquel que fue hecho para el fino equilibrio entre la guitarra y la batería.</p>
+          <p>En esta boutique hecha por y para bajistas encontrarás cualquiera que sea tu necesidad desde los clásicos Fender hasta los modernos Dingwall.</p>
+          <p>¿Quieres alguna marca difícil de encontrar en México? Pregúntanos lo más probable es que la podamos encontrar.</p>
+    </article>
+    <hr class="solid">
+
 </body>
 </html>

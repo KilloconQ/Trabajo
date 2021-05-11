@@ -1,11 +1,23 @@
 h2 {
     font-family: 'Jazz LET';
+    font-size: 50px;
     text-align: center;
 }
 
 a {
     font-family: 'Jazz LET';
     font-size: 20px;
+}
+
+p {
+    font-family: 'Jazz LET';
+    font-size: 30px;
+    text-align: justify;
+    padding-left: 50px;
+}
+
+hr.solid {
+    border-top: 2px solid #000;
 }
 
 #logo {
