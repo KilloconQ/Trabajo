@@ -24,7 +24,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="index.php" class="navbar-brand" href="../images/bass-cleff.jpg"></a>
+            <a href="index.php" class="navbar-brand">
+                <img src="../images/bass-cleff.jpg" alt="Brand"> 
+            </a>
         </div>
     </div>
    </nav>

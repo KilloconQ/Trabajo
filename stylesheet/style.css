@@ -3,6 +3,10 @@ h2 {
     text-align: center;
 }
 
+img {
+    height: 30px;
+}
+
 .titulo {
     font-family: 'Jazz LET';
     font-size: 50px;
