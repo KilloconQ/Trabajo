@@ -8,6 +8,8 @@
     <title>Inicio</title>
 </head>
 <body>
-    
+   <div class = "container-fluid cabecera" style = "height:200px">
+    <div></div>
+   </div> 
 </body>
 </html>
