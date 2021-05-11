@@ -62,5 +62,10 @@
         </div>
     </div>
    </nav>
+   <section class="main container">
+       <div class="advanced-banner-content" style="min-height: 600px;">
+
+       </div>
+   </section>
 </body>
 </html>
