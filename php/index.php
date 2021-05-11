@@ -19,15 +19,38 @@
     <div class="container">
         <div class="navbar-header" id="logo">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm" aria-expanded="false">
-                <span class="sr-only">Desplegar/Ocultar</span>
+                <span class="sr-only">Desplegar/Ocultar Menú</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <a href="index.php" class="navbar-brand">
-                <img src="../images/bass-cleff.jpg" alt="Brand"> 
+                <img src="../images/bass-cleff.jpg" alt="Brand" height="30" > 
             </a>
+            
         </div>
+        <!-- Menú -->
+        <div class="collapsed navbar-collapse" id="navegacion-fm">
+            <ul class = "nav navbar-nav">
+                <li>
+                    <a href="index.php">Inicio</a>
+                </li>
+                <li>
+                    <a href="tienda.php">Tienda</a>
+                </li>
+                </ul>
+        </div>
+        <div class="collapsed navbar-collapse" id="navegacion-fm">
+            <ul class = "nav navbar-nav">
+                <li>
+                    <a href="index.php">Inicio</a>
+                </li>
+                <li>
+                    <a href="tienda.php">Tienda</a>
+                </li>
+                </ul>
+        </div>
+
     </div>
    </nav>
 </body>

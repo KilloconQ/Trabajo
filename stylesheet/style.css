@@ -4,7 +4,11 @@ h2 {
 }
 
 img {
-    height: 30px;
+    padding-left: 10px;
+}
+
+#logo {
+    padding: 10 10 10 10;
 }
 
 .titulo {
@@ -14,6 +18,6 @@ img {
 }
 
 .container {
-    padding-top: 20px;
+    padding: 10px 10px 10px 10px;
     /*color:;*/
 }
