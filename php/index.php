@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="../stylesheet/style.css">
     <title>Inicio</title>
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.ico">
 </head>
 <body>
    <div class = "container-fluid cabecera" style = "height:200px">
@@ -38,19 +39,27 @@
                 <li>
                     <a href="tienda.php">Tienda</a>
                 </li>
-                </ul>
-        </div>
-        <div class="collapsed navbar-collapse" id="navegacion-fm">
-            <ul class = "nav navbar-nav">
+            </ul>
+            <ul class = "nav navbar-nav navbar-right">
                 <li>
-                    <a href="index.php">Inicio</a>
+                    <a href="login.php">
+                        <span class="glyphicon glyphicon-user"></span>
+                         Iniciar sesión 
+                    </a>
                 </li>
                 <li>
-                    <a href="tienda.php">Tienda</a>
+                    <a href="registro.php">
+                       <span class="glyphicon glyphicon-log-in"></span> 
+                       Registrarse
+                    </a>
                 </li>
-                </ul>
+                <li>
+                    <a href="carro.php">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                    </a>
+                </li>
+            </ul>
         </div>
-
     </div>
    </nav>
 </body>
