@@ -1,7 +1,11 @@
-h2,
-a {
+h2 {
     font-family: 'Jazz LET';
     text-align: center;
+}
+
+a {
+    font-family: 'Jazz LET';
+    font-size: 20px;
 }
 
 img {
