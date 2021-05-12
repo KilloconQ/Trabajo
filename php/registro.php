@@ -112,7 +112,7 @@
             <h2>Dirección</h2>
             <div class="form-group">
               <label for="calle">Calle</label>
-              <input type="text" name="data[calle]" id="street" class="form-control" placeholder="Calle" required>
+              <input type="text" name="data[calle]" id="calle" class="form-control" placeholder="Calle" required>
             </div>
             <div class="form-group">
               <label for="cp">Código postal</label>
@@ -129,6 +129,10 @@
             <div class="form-group">
               <label for="colonia">Colonia</label>
               <input type="text" name="data[colonia]" id="colonia" class="form-control" placeholder="Colonia" required>
+            </div>
+            <div class="form-group">
+              <label for="ciudad">Colonia</label>
+              <input type="text" name="data[ciudad]" id="ciudad" class="form-control" placeholder="Ciudad" required>
             </div>
             <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
             <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
