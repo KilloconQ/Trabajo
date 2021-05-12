@@ -46,16 +46,22 @@
             </ul>
             <ul class = "nav navbar-nav navbar-right">
                 <li>
-                    <a href="login.php">
-                        <span class="glyphicon glyphicon-user"></span>
-                         Iniciar sesión 
-                    </a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span class="caret"></span>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="login.php">Iniciar sesión</a>
+                                </li>
+                                <li>
+                                    <a href="registro.php">Registrarse</a> 
+                                </li>
+                                <li>
+                                    <a href="usuario.php">Usuario</a>
+                                </li>
+                            </ul>
+                        </a>
                 </li>
-                <li>
-                    <a href="registro.php">
-                       <span class="glyphicon glyphicon-log-in"></span> 
-                       Registrarse
-                    </a>
                 </li>
                 <li>
                     <a href="carro.php">
