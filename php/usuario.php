@@ -82,7 +82,7 @@
    </nav>
     <!-- Usuario Historial de compra -->
     <div class="container">
-        <h1>Historial de compras</h1>
+        <h1 class="titulo">Historial de compras</h1><br>
         <table class="table">
             <thead>
                 <th>Producto</th>

@@ -81,6 +81,48 @@
     </div>
    </nav>
 
+   <div class="main container">
+        <h1 class="titulo">Bienvenido Administrador</h1><br>
+
+        <div class="containecontainerr">
+            <h3 style="text-align: center;">Historial de compras</h3>
+            <table class="table">
+                <thead>
+                    <th>Producto</th>
+                    <th>Fabricante</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                </thead>
+            </table>
+        </div>
+        
+
+        <hr >
+
+        <div class="container">
+            <h3 style="text-align: center;">Añadir producto</h3>
+                <form action="#" method="post" id="login_form">
+                    <div class="form-group">
+                        <label for="Nombre de Producto">Nombre de producto</label>
+                        <input type="text" class="form-control" id="nombre_producto" name="data[nombre_producto]" placeholder="Nombre de producto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Fabricante">Fabricante</label>
+                        <input type="text" class="form-control" id="fabricante" name="data[fabricante]" placeholder="Fabricante" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Origen">Origen</label>
+                        <input type="text" class="form-control" id="origen" name="data[origen]" placeholder="Origen" required>
+                    </div>
+                    <div class="form-group">
+                       <label for="Cantidad">Cantidad a añadir</label>
+                       <input type="number" class="form-control" id="cantidad" name="data[cantidad]"  required>
+                    </div>
+                    
+                    <input type="submit" name="submit" class="submit btn btn-success" value="Añadir" id="submit_data" />   
+                </form>
+        </div>
+    </div>
    
 </body>
 </html>

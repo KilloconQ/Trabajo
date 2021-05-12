@@ -77,6 +77,7 @@
         </div>
     </div>
    </nav>
+
       <!-- Productos -->
     <section class="main container">
       <article class="tema clearfix">
@@ -98,5 +99,6 @@
         </article>
         <hr class="solid">
     </section>
+
 </body>
 </html>
