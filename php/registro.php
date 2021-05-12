@@ -130,14 +130,6 @@
               <label for="numero_tarjeta">Número de tarjeta</label>
               <input type="text" name="data[numero_tarjeta]" id="numero_tarjeta" class="form-control" placeholder="Numero de tarjeta" required>
             </div>
-            <div class="form-group">
-              <label for="mes_caduca">Mes de caducidad</label>
-              <input type="text" name="data[mes_caduca]" id="mes_caduca" class="form-control" placeholder="Mes de caducidad" required>
-            </div>
-            <div class="form-group">
-              <label for="anno_caduca">Año de caducidad</label>
-              <input type="text" name="data[mes_caduca]" id="anno_caduca" class="form-control" placeholder="Año de caducidad" required>
-            </div>
             <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
             <input type="submit" name="submit" class="submit btn btn-success" value="Enviar" id="submit_data" />
         </fieldset>
