@@ -76,7 +76,18 @@
     </div>
    </nav>
     <!-- Usuario Historial de compra -->
-    
-   
+    <div class="container">
+        <h1>Historial de compras</h1>
+        <table class="table">
+            <thead>
+                <th>Producto</th>
+                <th>Fabricante</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+            </thead>
+        </table>
+    </div>
+
+
 </body>
 </html
