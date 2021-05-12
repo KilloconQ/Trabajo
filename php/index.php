@@ -15,7 +15,7 @@
 
    <div class = "container-fluid cabecera" style = "height:200px">
     <div class="container">    
-        <h1 class="titulo">BASS Cleaf</h1>
+        <h1 class="titulo">BASS Clef</h1>
         <h2 id="slogan">Tu boutique del bajo eléctrico</h2> 
     </div>
    </div> 
