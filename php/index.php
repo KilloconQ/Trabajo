@@ -59,6 +59,9 @@
                                 <li>
                                     <a href="usuario.php">Usuario</a>
                                 </li>
+                                <li>
+                                    <a href="#">Cerrar sesión</a>
+                                </li>
                             </ul>
                         </a>
                 </li>
