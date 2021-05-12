@@ -4,11 +4,12 @@ h2 {
     text-align: center;
 }
 
-h1 {
+
+/*h1 {
     font-family: 'Jazz LET';
     font-size: 60px;
     text-align: center;
-}
+}*/
 
 a {
     font-family: 'Jazz LET';
@@ -26,8 +27,8 @@ hr.solid {
     border-top: 2px solid #000;
 }
 
-body {
-    margin: 50px auto;
+#registro {
+    margin: 30px auto;
     text-align: center;
     width: 800px;
 }
@@ -91,6 +92,10 @@ p.error {
     display: none;
 }
 
+#aviso {
+    text-align: center;
+}
+
 .advanced-banner-content {
     padding-left: 50px;
     height: 500px;
@@ -105,5 +110,4 @@ p.error {
 
 .container {
     padding: 10px 10px 10px 10px;
-    /*color:;*/
 }

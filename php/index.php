@@ -12,13 +12,15 @@
     <link rel="shortcut icon" type="image/png" href="../images/favicon.ico">
 </head>
 <body>
+
    <div class = "container-fluid cabecera" style = "height:200px">
     <div class="container">    
         <h1 class="titulo">BASS Cleaf</h1>
         <h2 id="slogan">Tu boutique del bajo eléctrico</h2> 
     </div>
    </div> 
-   <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset="197">
+
+   <nav class="navbar navbar-inverse" role="navigation" data-offset="197">
     <div class="container">
         <div class="navbar-header" id="logo">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm" aria-expanded="false">
@@ -64,6 +66,7 @@
         </div>
     </div>
    </nav>
+
    <section class="main container">
        <div class="advanced-banner-content" style="min-height: 700px">
             <img src="../images/bajista.jpg" alt="Bajista">
@@ -74,9 +77,18 @@
        <h2>¿Quienes somos?</h2>
           <p>Somos una tienda especializada en el intrumento superior, aquel que fue hecho para el fino equilibrio entre la guitarra y la batería.</p>
           <p>En esta boutique hecha por y para bajistas encontrarás cualquiera que sea tu necesidad desde los clásicos Fender hasta los modernos Dingwall.</p>
-          <p>¿Quieres alguna marca difícil de encontrar en México? Pregúntanos lo más probable es que la podamos encontrar.</p>
+          <p>¿Quieres alguna marca difícil de encontrar en México? Pregúntanos lo más probable es que la podamos conseguir.</p>
     </article>
     <hr class="solid">
+    </section>
+       <article class="team clearfix">
+       <h2>¡AVISO!</h2>
+          <p id="aviso">
+              Esta página está en desarrollo continuo así que si no encuentras productos como amplificadores, cuerdas u otros 
+              no te preocupes; pronto estarán disponibles.
+          </p>
+        </article>
+        <hr class="solid">
 
 </body>
 </html>
