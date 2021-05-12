@@ -1,6 +1,6 @@
 h2 {
     font-family: 'Jazz LET';
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -94,6 +94,15 @@ p.error {
 
 #aviso {
     text-align: center;
+}
+
+#precision {
+    height: 300px;
+}
+
+.ty-product-list__image {
+    width: 300px;
+    display: flex;
 }
 
 .advanced-banner-content {

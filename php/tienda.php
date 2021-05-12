@@ -74,7 +74,39 @@
         </div>
     </div>
    </nav>
+    <!-- Productos -->
+   <div class="ty-roduct-list clearfix">
+       <form action="index.php" method="POST" name="product" class="cm-disable-empty-files  cm-ajax cm-ajax-full-render cm-ajax-status-middle  cm-processed-form">
+           <div class="span4 ty-product-list__image" >
+                   <img src="../images/precision_bass.jpg" alt="Precision_Bass" id="precision">
+           </div>
+           <div class="ty-product-list__content">
+               <div class="ty-product-list__info">
+                   <div class="ty-product-list__item-name">
+                       <bdi>
+                           <a href="#">Precision Bass</a>
+                       </bdi>
+                   </div>
+                   <div>  </div>
+                   <div class="ty-product-list__description">
+                       <div>
+                           Un icono desde su creación en 1951. Este modelo que nos presenta Fender es el más asequible pero eso no significa que le falte sonido.
+                       </div>
+                   </div>
+                   <div class="ty-product-list__feature">
+                       <div>
+                           <em>
+                               Fabricante: Fender
+                           </em>
+                       </div>
 
-   
+                   </div>
+
+
+               </div>
+
+           </div>
+       </form>
+   </div> 
 </body>
 </html>
