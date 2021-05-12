@@ -31,7 +31,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="index.php" class="navbar-brand">
+            <a href="cerrar.php" class="navbar-brand">
                 <img src="../images/bass-cleff.jpg" alt="Brand" height="30" > 
             </a>
             

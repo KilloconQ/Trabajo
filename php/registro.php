@@ -64,7 +64,7 @@
                                     <a href="usuario.php">Usuario</a>
                                 </li>
                                 <li>
-                                    <a href="#">Cerrar sesión</a>
+                                    <a href="cerrar.php">Cerrar sesión</a>
                                 </li>
                             </ul>
                         </a>
