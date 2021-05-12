@@ -76,7 +76,7 @@
     </div>
    </nav>
 
- 
+    <!-- Registro -->
    <div class="container">
         <h1>Registro de usuarios</h1>
         <div class="progress">

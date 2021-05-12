@@ -75,6 +75,21 @@
         </div>
     </div>
    </nav>
+   <!-- Inicio de sesión -->
+   <div class="container">
+        <h1 class="titulo">Iniciar sesión</h1>
+        <form action="#" method="post" id="login_form">
+        <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="data[email]" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">Contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+            </div>
+            <input type="submit" name="submit" class="submit btn btn-success" value="Enviar" id="submit_data" />   
+        </form>
+   </div>
 
    
 </body>

@@ -74,39 +74,26 @@
         </div>
     </div>
    </nav>
-    <!-- Productos -->
-   <div class="ty-roduct-list clearfix">
-       <form action="index.php" method="POST" name="product" class="cm-disable-empty-files  cm-ajax cm-ajax-full-render cm-ajax-status-middle  cm-processed-form">
-           <div class="span4 ty-product-list__image" >
-                   <img src="../images/precision_bass.jpg" alt="Precision_Bass" id="precision">
-           </div>
-           <div class="ty-product-list__content">
-               <div class="ty-product-list__info">
-                   <div class="ty-product-list__item-name">
-                       <bdi>
-                           <a href="#">Precision Bass</a>
-                       </bdi>
-                   </div>
-                   <div>  </div>
-                   <div class="ty-product-list__description">
-                       <div>
-                           Un icono desde su creación en 1951. Este modelo que nos presenta Fender es el más asequible pero eso no significa que le falte sonido.
-                       </div>
-                   </div>
-                   <div class="ty-product-list__feature">
-                       <div>
-                           <em>
-                               Fabricante: Fender
-                           </em>
-                       </div>
-
-                   </div>
-
-
-               </div>
-
-           </div>
-       </form>
-   </div> 
+      <!-- Productos -->
+    <section class="main container">
+      <article class="tema clearfix">
+      <a href="#" class="thumb pull-left">
+          <img src="../images/precision_bass.jpg" alt="Precision_Bass" class="img-thumbnail" id="precision">
+      </a>
+      <h3 class = "producto"> Precision Bass </h3>
+      <p class="post-cpntenido text-justify">
+          Un verdadero icono desde su creación en 1951, usado por miles de bajistas alrededor del mundo. Este modelo fabricado en México, es el más asequible de la marca, 
+          pero sin sacrificar el sonido característico en el proceso.
+      </p>
+      <em>Fabricante: <strong>Fender</strong> </em>
+      <div class="contenedor-botones text-right">
+            <a href="carro.php" class="btn btn-primary">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                Mandar a carrito
+            </a>
+        </div>
+        </article>
+        <hr class="solid">
+    </section>
 </body>
 </html>

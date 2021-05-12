@@ -4,8 +4,23 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    font-family: 'Jazz LET';
+    font-size: 30px;
+    text-decoration: left;
+}
 
-/*h1 {
+
+/*img {
+    height: 100px;
+    width: 20px;
+}*/
+
+
+/*body {
+background-color: #333;
+}
+h1 {
     font-family: 'Jazz LET';
     font-size: 60px;
     text-align: center;
@@ -96,8 +111,9 @@ p.error {
     text-align: center;
 }
 
-#precision {
-    height: 300px;
+#producto {
+    font-size: 20px;
+    text-align: left;
 }
 
 .ty-product-list__image {
@@ -119,4 +135,10 @@ p.error {
 
 .container {
     padding: 10px 10px 10px 10px;
+}
+
+.img-thumbnail {
+    /*transform: rotate(-90deg);*/
+    max-width: 26%;
+    height: auto;
 }
