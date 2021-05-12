@@ -13,8 +13,7 @@
     <link rel="shortcut icon" type="image/png" href="../images/favicon.ico">
 </head>
 <body>
-
-   <div class = "container-fluid cabecera" style = "height:200px">
+    <div class = "container-fluid cabecera" style = "height:200px">
     <div class="container">    
         <h1 class="titulo">BASS Cleaf</h1>
         <h2 id="slogan">Tu boutique del bajo eléctrico</h2> 
@@ -47,16 +46,25 @@
             </ul>
             <ul class = "nav navbar-nav navbar-right">
                 <li>
-                    <a href="login.php">
-                        <span class="glyphicon glyphicon-user"></span>
-                         Iniciar sesión 
-                    </a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span class="caret"></span>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="login.php">Iniciar sesión</a>
+                                </li>
+                                <li>
+                                    <a href="registro.php">Registrarse</a> 
+                                </li>
+                                <li>
+                                    <a href="usuario.php">Usuario</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cerrar sesión</a>
+                                </li>
+                            </ul>
+                        </a>
                 </li>
-                <li>
-                    <a href="registro.php">
-                       <span class="glyphicon glyphicon-log-in"></span> 
-                       Registrarse
-                    </a>
                 </li>
                 <li>
                     <a href="carro.php">
@@ -68,7 +76,8 @@
     </div>
    </nav>
 
-  <div class="container">
+ 
+   <div class="container">
         <h1>Registro de usuarios</h1>
         <div class="progress">
             <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
