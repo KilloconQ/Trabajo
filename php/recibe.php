@@ -23,7 +23,7 @@
 
     $email= mysqli_real_escape_string($link, $_POST['email']);
     $contrasenna= mysqli_real_escape_string($link,$_POST['password']); 
-    $nombre_usuario= mysqli_real_escape_string($link,$_POST['name']);
+    $nombre_usuario= mysqli_real_escape_string($link,$_POST['user_name']);
     $fecha= mysqli_real_escape_string($link, $_POST['date']);
     $numero= mysqli_real_escape_string($link, $_POST['numero_tarjeta']);
     $calle= mysqli_real_escape_string($link, $_POST['calle']);
@@ -33,10 +33,6 @@
     $colonia= mysqli_real_escape_string($link, $_POST['colonia']);
     $ciudad= mysqli_real_escape_string($link, $_POST['ciudad']);
     $numero_tarjeta = mysqli_real_escape_string($link, $_POST['numero_tarjeta']) ;
-    $select = "SELECT my_db.id_usuario FROM my_db.usuario WHERE my_db.nombre_usuario = $nombre_usuario, my_db.email = $email";
-    $result = mysqli_query($link, $select);
-    $row = mysqli_fetch_all($result);
-    $id_numero = $row['id_numero'];
 
    $insert1 = "INSERT INTO my_db.usuario (nombre_usuario, email, contrasenna, nacimiento, numero_tarjeta) VALUES('$nombre_usuario', '$email', '$contrasenna', '$fecha', '$numero_tarjeta');";
     
@@ -46,7 +42,7 @@
 
     echo "1 record added";
 
-    $insert2 = "INSERT INTO my_db.direccion (id_usuario, calle, cp, numero, estado, colonia, ciudad) VALUES(, '', '', '', '', '', '');";
+    $insert2 = "INSERT INTO my_db.direccion (id_usuario, calle, cp, numero, estado, colonia, ciudad) VALUES((select id_usuario from usuario where nombre_usuario = '$nombre_usuario' and contrasenna = '$contrasenna' and email = '$email'), '$calle', '$cp', '$numero', '$estado', '$colonia', '$ciudad');";
     
     if(!mysqli_query($link, $insert2)) {
        die('Error: ' . mysqli_error($link));
@@ -55,6 +51,5 @@
     echo "1 record added";
     
     mysqli_close($link);
-   //echo "<p>$email, $contrasenna, $nombre_usuario, $fecha, $numero_tarjeta, $calle, $cp, $numero, $estado, $colonia, $numero_tarjeta</p>";
-//   header("Location: index.php");*/
+    header("Location: index.php");
 ?>
