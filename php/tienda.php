@@ -15,6 +15,26 @@
     <link rel="shortcut icon" type="image/png" href="../images/favicon.ico">
 </head>
 <body>
+<?php
+
+$user = 'root';
+$password = 'root';
+$db = 'my_db';
+$host = 'localhost';
+$port = 3306;
+
+$link = mysqli_init();
+$success = mysqli_real_connect(
+   $link, 
+   $host, 
+   $user, 
+   $password, 
+   $db,
+   $port
+);  
+
+
+?>
     <div class = "container-fluid cabecera" style = "height:200px">
     <div class="container">    
         <h1 class="titulo">BASS Clef</h1>
@@ -98,7 +118,85 @@
         </div>
         </article>
         <hr class="solid">
+        
+        <article class="tema clearfix">
+        <a href="#" class="thumb pull-left">
+          <img src="../images/precision_bass.jpg" alt="Precision_Bass" class="img-thumbnail" id="precision">
+          </a>
+        <h3 class = "producto"> Precision Bass </h3>
+       <p class="post-cpntenido text-justify">
+          Un verdadero icono desde su creación en 1951, usado por miles de bajistas alrededor del mundo. Este modelo fabricado en México, es el más asequible de la marca, 
+          pero sin sacrificar el sonido característico en el proceso.
+      </p>
+      <em>Fabricante: <strong>Fender</strong> </em>
+      <div class="contenedor-botones text-right">
+            <a href="carro.php" class="btn btn-primary">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                Mandar a carrito
+            </a>
+        </div>
+        </article>
+        <hr class="solid">
+
+        <article class="tema clearfix">
+        <a href="#" class="thumb pull-left">
+          <img src="../images/precision_bass.jpg" alt="Precision_Bass" class="img-thumbnail" id="precision">
+          </a>
+        <h3 class = "producto"> Precision Bass </h3>
+       <p class="post-cpntenido text-justify">
+          Un verdadero icono desde su creación en 1951, usado por miles de bajistas alrededor del mundo. Este modelo fabricado en México, es el más asequible de la marca, 
+          pero sin sacrificar el sonido característico en el proceso.
+      </p>
+      <em>Fabricante: <strong>Fender</strong> </em>
+      <div class="contenedor-botones text-right">
+            <a href="carro.php" class="btn btn-primary">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                Mandar a carrito
+            </a>
+        </div>
+        </article>
+        <hr class="solid">
+
+        <article class="tema clearfix">
+        <a href="#" class="thumb pull-left">
+          <img src="../images/precision_bass.jpg" alt="Precision_Bass" class="img-thumbnail" id="precision">
+          </a>
+        <h3 class = "producto"> Precision Bass </h3>
+       <p class="post-cpntenido text-justify">
+          Un verdadero icono desde su creación en 1951, usado por miles de bajistas alrededor del mundo. Este modelo fabricado en México, es el más asequible de la marca, 
+          pero sin sacrificar el sonido característico en el proceso.
+      </p>
+      <em>Fabricante: <strong>Fender</strong> </em>
+      <div class="contenedor-botones text-right">
+            <a href="carro.php" class="btn btn-primary">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                Mandar a carrito
+            </a>
+        </div>
+        </article>
+        <hr class="solid">
+
+        <article class="tema clearfix">
+        <a href="#" class="thumb pull-left">
+          <img src="../images/precision_bass.jpg" alt="Precision_Bass" class="img-thumbnail" id="precision">
+          </a>
+        <h3 class = "producto"> Precision Bass </h3>
+       <p class="post-cpntenido text-justify">
+          Un verdadero icono desde su creación en 1951, usado por miles de bajistas alrededor del mundo. Este modelo fabricado en México, es el más asequible de la marca, 
+          pero sin sacrificar el sonido característico en el proceso.
+      </p>
+      <em>Fabricante: <strong>Fender</strong> </em>
+      <div class="contenedor-botones text-right">
+            <a href="carro.php" class="btn btn-primary">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                Mandar a carrito
+            </a>
+        </div>
+        </article>
+        <hr class="solid">
+
     </section>
+    
 
 </body>
 </html>
