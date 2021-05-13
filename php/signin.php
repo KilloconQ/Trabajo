@@ -22,11 +22,17 @@
 if (mysqli_connect_errno()){
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
    }
-    $sql1 = mysqli_query("SELECT email FROM my_db.usuario WHERE email = '$email' ;");
-    $sql2 = mysqli_query("SELECT contrasenna FROM my_db.usuario WHERE = '$contrasenna' ;");
+    $sql = mysqli_query($link,"SELECT email FROM usuario WHERE email = '$email'");
+    $sql2 = mysqli_query($link, "SELECT contrasenna FROM my_db.usuario WHERE contrasenna = '$contrasenna' ");
     if(mysqli_num_rows($sql) > 0){
+        if(mysqli_num_rows($sql2) > 0) {
+            echo "Existe el usuario";
+        }else{
+            echo "No existe: primer else";
+        }
 
-
+    } else {
+            echo "No existe: segundo else";
     }
 
 

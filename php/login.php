@@ -86,11 +86,11 @@
         <form action="signin.php" method="post" id="login_form">
         <div class="form-element">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="data[email]" placeholder="Email" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
             </div>
             <div class="form-group">
                 <label for="inputPassword">Contraseña</label>
-                <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
             </div>
             <button type="submit" name="login" value="login" style="background-color:#333">Iniciar sesión</button>
         </form>
