@@ -15,8 +15,7 @@
       $port
    );  
 
-    session_start();
-   $email = $_POST['email'];
+       $email = $_POST['email'];
    $contrasenna = $_POST['password'];
 
 if (mysqli_connect_errno()){
@@ -27,6 +26,8 @@ if (mysqli_connect_errno()){
     if(mysqli_num_rows($sql) > 0){
         if(mysqli_num_rows($sql2) > 0) {
             echo "Existe el usuario";
+            session_start();
+
         }else{
             echo "No existe: primer else";
         }
@@ -36,5 +37,6 @@ if (mysqli_connect_errno()){
     }
 
 
+    header("Location: index.php");
 
 ?>

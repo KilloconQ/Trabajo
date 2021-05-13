@@ -50,6 +50,16 @@
             </ul>
             <ul class = "nav navbar-nav navbar-right">
                 <li>
+                    <span value="Hide">
+                    <?php
+                        if(session_status() != PHP_SESSION_NONE){
+                            $_POST['user_name']
+
+                        }
+                    ?>
+                    </span>
+                </li>
+                <li>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
                             <span class="glyphicon glyphicon-user"></span>
                             <span class="caret"></span>
