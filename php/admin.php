@@ -122,7 +122,7 @@
 
        mysqli_close($link);
 
-       ?>
+?>
             </table>
     
         </div>

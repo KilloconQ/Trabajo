@@ -148,19 +148,19 @@ echo "<p>$precio</p>";*/
                 if ($cantidad>=1){
                     echo "<article class='tema clearfix'>";
                     echo "   <a href=\"tienda.php\" class=\"thumb pull-left\">";
-                    echo "   <img src=". $fotos ." alt='Precision_Bass' class='img-thumbnail' id='precision'>";
+                    echo "   <img src=". $fotos ." class='img-thumbnail' id='precision'>";
                     echo "   </a>";
                     echo "<h3 class = \"producto\">" . $nombre ." </h3>";
-                    echo "<p class=\"post-cpntenido text-justify\">";
+                    echo "<p class=\"post-contenido text-justify\">";
                     echo  $descripcion;
                     echo "</p>";
                     echo "<h3 class=\"text-right\">$". $precio . "MXN</h3>";
                     echo "<em>Fabricante: <strong>". $fabricante ."</strong> </em>";
-                    echo "<div class=\"contenedor-botones text-right\">";
-                    echo "<a href=\"carro.php\" class=\"btn btn-primary\">";
-                    echo "   <span class=\"glyphicon glyphicon-shopping-cart\"></span>";
-                    echo "   Mandar a carrito";
-                    echo "</a>";
+                    echo "<div class=\"text-right\">";
+                    echo "<form method=\"post\" action=\"carro.php\" id=\"pasar_info\">";
+                    echo "  <input href=\"carro.php\" class=\"btn btn-primary\" value='Mandar a carrito'>";
+                    echo " </input>";
+                    echo "</form>";
                     echo "</div>";
                     echo "</article>";
                     echo "<hr class=\"solid\">";

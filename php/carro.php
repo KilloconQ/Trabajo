@@ -80,7 +80,9 @@
         </div>
     </div>
    </nav>
-
+   <?php
+   
+   ?> 
    
 </body>
 </html>
