@@ -17,6 +17,9 @@
     <link rel="shortcut icon" type="image/png" href="../images/favicon.ico">
 </head>
 <body>
+
+
+
     <div class = "container-fluid cabecera" style = "height:200px">
     <div class="container">    
         <h1 class="titulo">BASS Clef</h1>
@@ -86,28 +89,28 @@
         <div class="progress">
             <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-    <form method="post" action="" id="registration_form">
+    <form method="post" action="recibe.php" id="registration_form">
         <fieldset>
             <h2>Crea tu cuenta</h2>    
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="data[email]" placeholder="Email" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
             </div>
             <div class="form-group">
                 <label for="inputPassword">Contraseña</label>
-                <input type="password" class="form-control" id="password" placeholder="Password" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
             </div>
-            <input type="button" name="data[password]" class="next btn btn-info" value="Siguiente" />                         
+            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />                         
         </fieldset>
         <fieldset>
             <h2>Agregar detalles personales</h2>
             <div class="form-group">
                 <label for="user_name">Nombre de Usuario</label>
-                <input type="text" name="data[user_name]" id="uname" placeholder="Nombre" required>
+                <input type="text" name="user_name" id="uname" placeholder="Nombre de Usuario" required>
             </div>
             <div class="form-group">
                 <label for="date">Fecha de nacimiento</label>
-                <input type="date" value="2021-05-13" id="fecha">
+                <input type="date" name="date" value="<?php echo date("Y-m-d");?>" id="fecha">
             </div>
             <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
             <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
@@ -116,27 +119,27 @@
             <h2>Dirección</h2>
             <div class="form-group">
               <label for="calle">Calle</label>
-              <input type="text" name="data[calle]" id="calle" class="form-control" placeholder="Calle" required>
+              <input type="text" name="calle" id="calle" class="form-control" placeholder="Calle" required>
             </div>
             <div class="form-group">
               <label for="cp">Código postal</label>
-              <input type="text" name="data[cp]" id="cp" class="form-control" placeholder="Código postal" required>>
+              <input type="text" name="cp" id="cp" class="form-control" placeholder="Código postal" required>
             </div>
             <div class="form-group">
-              <label for="numero">Numero</label>
-              <input type="text" name="data[numero]" id="numero" class="form-control" placeholder="Número" required>
+              <label for="numero">Número</label>
+              <input type="text" name="numero" id="numero" class="form-control" placeholder="Número" required>
             </div>
             <div class="form-group">
               <label for="estado">Estado</label>
-              <input type="text" name="data[estado]" id="estado" class="form-control" placeholder="Estado" required>
+              <input type="text" name="estado" id="estado" class="form-control" placeholder="Estado" required>
             </div>
             <div class="form-group">
               <label for="colonia">Colonia</label>
-              <input type="text" name="data[colonia]" id="colonia" class="form-control" placeholder="Colonia" required>
+              <input type="text" name="colonia" id="colonia" class="form-control" placeholder="Colonia" required>
             </div>
             <div class="form-group">
-              <label for="ciudad">Colonia</label>
-              <input type="text" name="data[ciudad]" id="ciudad" class="form-control" placeholder="Ciudad" required>
+              <label for="ciudad">Ciudad</label>
+              <input type="text" name="ciudad" id="ciudad" class="form-control" placeholder="Ciudad" required>
             </div>
             <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
             <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
@@ -145,12 +148,13 @@
             <h2>Datos de tarjeta</h2>
             <div class="form-group">
               <label for="numero_tarjeta">Número de tarjeta</label>
-              <input type="text" name="data[numero_tarjeta]" id="numero_tarjeta" class="form-control" placeholder="Numero de tarjeta" required>
+              <input type="text" name="numero_tarjeta" id="numero_tarjeta" class="form-control" placeholder="Numero de tarjeta" required>
             </div>
             <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="submit" name="submit" class="submit btn btn-success" value="Enviar" id="submit_data" />
+            <input type="submit" name="submit" class="submit btn btn-success" value="Registrarse" id="submit_data" >
         </fieldset>
     </form>
    </div> 
+
 </body>
 </html>
