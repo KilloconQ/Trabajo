@@ -132,24 +132,35 @@
 
         <div class="container">
             <h3 style="text-align: center;">Añadir producto</h3>
-                <form action="#" method="post" id="login_form">
+                <form action="#" method="post" id="add_form">
                     <div class="form-group">
                         <label for="Nombre de Producto">Nombre de producto</label>
-                        <input type="text" class="form-control" id="nombre_producto" name="data[nombre_producto]" placeholder="Nombre de producto" required>
+                        <input type="text" class="form-control" id="nombre_producto" name="nombre_producto"  required>
                     </div>
                     <div class="form-group">
-                        <label for="Fabricante">Fabricante</label>
-                        <input type="text" class="form-control" id="fabricante" name="data[fabricante]" placeholder="Fabricante" required>
+                        <label for="Descripcion">Descripción</label>
+                        <input type="text" class="form-control" id="descripcion" name="descripcion"  required>
                     </div>
                     <div class="form-group">
-                        <label for="Origen">Origen</label>
-                        <input type="text" class="form-control" id="origen" name="data[origen]" placeholder="Origen" required>
+                        <label for="Fabricante">Imagen (introduce liga a foto ej: ../images/ejemplo.jpg)</label>
+                        <input type="text" class="form-control" id="imagenes" name="imagenes"  required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Precio">Precio</label>
+                        <input type="number" class="form-control" id="precio" name="precio"  required>
                     </div>
                     <div class="form-group">
                        <label for="Cantidad">Cantidad a añadir</label>
-                       <input type="number" class="form-control" id="cantidad" name="data[cantidad]"  required>
+                       <input type="number" class="form-control" id="cantidad" name="cantidad"  required>
                     </div>
-                    
+                    <div class="form-group">
+                        <label for="Fabricante">Fabricante</label>
+                        <input type="text" class="form-control" id="fabricante" name="fabricante" placeholder="Fabricante" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Origen">Origen</label>
+                        <input type="text" class="form-control" id="origen" name="origen" placeholder="Origen" required>
+                    </div>
                     <input type="submit" name="submit" class="submit btn btn-success" value="Añadir" id="submit_data" />   
                 </form>
         </div>
