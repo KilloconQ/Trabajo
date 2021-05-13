@@ -208,6 +208,8 @@
             if(!mysqli_query($link, $insert)) {die('Error: ' . mysqli_error($link));}
         }
         }
+        $nombre_producto = $descripcion = $imagen = $fabricante = $origen = "";
+        $precio = $cantidad = 0;
         mysqli_close($link);
     ?>
    
