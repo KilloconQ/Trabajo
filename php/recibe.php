@@ -33,12 +33,8 @@
     $colonia= mysqli_real_escape_string($link, $_POST['colonia']);
     $ciudad= mysqli_real_escape_string($link, $_POST['ciudad']);
     $numero_tarjeta = mysqli_real_escape_string($link, $_POST['numero_tarjeta']) ;
-  /* $email = mysqli_real_escape_string($link, $_POST['data[email]']);
-   $contrasenna= mysqli_real_escape_string($link, $_POST['data[password]']);
-   $nombre_usuario = mysqli_real_escape_string($link, $_POST['data[name]']);
-   $fecha = $_POST['data[date]']; 
-   $numero_tarjeta=mysqli_real_escape_string($link, $_POST['data[numero_tarjeta]']);*/
 
    
    echo "<p>$email, $contrasenna, $nombre_usuario, $fecha, $numero_tarjeta, $calle, $cp, $numero, $estado, $colonia, $numero_tarjeta</p>";
 //   header("Location: index.php");
+?>
