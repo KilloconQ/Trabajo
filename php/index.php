@@ -103,6 +103,15 @@
           </p>
         </article>
         <hr class="solid">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <a href="admin.php" class="glyphicon glyphicon-off" style="background-color: #fff;"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 </body>
 </html>
