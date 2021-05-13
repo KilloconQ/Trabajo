@@ -37,9 +37,11 @@ if (mysqli_connect_errno()){
     }
 
 
+    mysqli_close($link);
     header("Location: index.php");
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,6 +51,8 @@ if (mysqli_connect_errno()){
     <title>Document</title>
 </head>
 <body>
-    <form action="index.php"></form>
+    <form action="index.php">
+
+    </form>
 </body>
 </html>

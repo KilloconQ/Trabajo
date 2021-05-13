@@ -16,7 +16,7 @@
 </head>
 <body>
 <?php
-
+/*
 $user = 'root';
 $password = 'root';
 $db = 'my_db';
@@ -117,105 +117,58 @@ echo "<p>$precio</p>";*/
 
       <!-- Productos -->
     <section class="main container">
-      <article class="tema clearfix">
-      <a href="#" class="thumb pull-left">
-          <img src="<?php echo $fotos;?>" alt="Precision_Bass" class="img-thumbnail" id="precision">
-      </a>
-      <h3 class = "producto"> <?php echo $nombre;?> </h3>
-      <p class="post-cpntenido text-justify">
-          <? echo $descripcion; ?>
-      </p>
-      <h3 class="text-right">$ <?php echo $precio;?> MXN</h3>
-      <em>Fabricante: <strong><?php echo $fabricante;?></strong> </em>
-      <div class="contenedor-botones text-right">
-            <a href="carro.php" class="btn btn-primary">
-                <span class="glyphicon glyphicon-shopping-cart"></span>
-                Mandar a carrito
-            </a>
-        </div>
-        </article>
-        <hr class="solid">
-        
-        <article class="tema clearfix">
-        <a href="#" class="thumb pull-left">
-          <img src="../images/precision_bass.jpg" alt="Precision_Bass" class="img-thumbnail" id="precision">
-          </a>
-        <h3 class = "producto"> Precision Bass </h3>
-       <p class="post-cpntenido text-justify">
-          Un verdadero icono desde su creación en 1951, usado por miles de bajistas alrededor del mundo. Este modelo fabricado en México, es el más asequible de la marca, 
-          pero sin sacrificar el sonido característico en el proceso.
-      </p>
-      <h3 class="text-right">$20,000</h3>
-      <em>Fabricante: <strong>Fender</strong> </em>
-      <div class="contenedor-botones text-right">
-            <a href="carro.php" class="btn btn-primary">
-                <span class="glyphicon glyphicon-shopping-cart"></span>
-                Mandar a carrito
-            </a>
-        </div>
-        </article>
-        <hr class="solid">
+      <?php
+            $user = 'root';
+            $password = 'root';
+            $db = 'my_db';
+            $host = 'localhost';
+            $port = 3306;
+            
+            $link = mysqli_init();
+            $success = mysqli_real_connect(
+               $link, 
+               $host, 
+               $user, 
+               $password, 
+               $db,
+               $port
+            );
+            if (mysqli_connect_errno()) {
+                echo "Failed to connect to MySQL: " . mysqli_connect_error();
+              }
 
-        <article class="tema clearfix">
-        <a href="#" class="thumb pull-left">
-          <img src="../images/precision_bass.jpg" alt="Precision_Bass" class="img-thumbnail" id="precision">
-          </a>
-        <h3 class = "producto"> Precision Bass </h3>
-       <p class="post-cpntenido text-justify">
-          Un verdadero icono desde su creación en 1951, usado por miles de bajistas alrededor del mundo. Este modelo fabricado en México, es el más asequible de la marca, 
-          pero sin sacrificar el sonido característico en el proceso.
-      </p>
-      <h3 class="text-right">$20,000</h3>
-      <em>Fabricante: <strong>Fender</strong> </em>
-      <div class="contenedor-botones text-right">
-            <a href="carro.php" class="btn btn-primary">
-                <span class="glyphicon glyphicon-shopping-cart"></span>
-                Mandar a carrito
-            </a>
-        </div>
-        </article>
-        <hr class="solid">
-
-        <article class="tema clearfix">
-        <a href="#" class="thumb pull-left">
-          <img src="../images/precision_bass.jpg" alt="Precision_Bass" class="img-thumbnail" id="precision">
-          </a>
-        <h3 class = "producto"> Precision Bass </h3>
-       <p class="post-cpntenido text-justify">
-          Un verdadero icono desde su creación en 1951, usado por miles de bajistas alrededor del mundo. Este modelo fabricado en México, es el más asequible de la marca, 
-          pero sin sacrificar el sonido característico en el proceso.
-      </p>
-      <h3 class="text-right">$20,000</h3>
-      <em>Fabricante: <strong>Fender</strong> </em>
-      <div class="contenedor-botones text-right">
-            <a href="carro.php" class="btn btn-primary">
-                <span class="glyphicon glyphicon-shopping-cart"></span>
-                Mandar a carrito
-            </a>
-        </div>
-        </article>
-        <hr class="solid">
-
-        <article class="tema clearfix">
-        <a href="#" class="thumb pull-left">
-          <img src="../images/precision_bass.jpg" alt="Precision_Bass" class="img-thumbnail" id="precision">
-          </a>
-        <h3 class = "producto"> Precision Bass </h3>
-       <p class="post-cpntenido text-justify">
-          Un verdadero icono desde su creación en 1951, usado por miles de bajistas alrededor del mundo. Este modelo fabricado en México, es el más asequible de la marca, 
-          pero sin sacrificar el sonido característico en el proceso.
-      </p>
-      <h3 class="text-right">$20,000</h3>
-      <em>Fabricante: <strong>Fender</strong> </em>
-      <div class="contenedor-botones text-right">
-            <a href="carro.php" class="btn btn-primary">
-                <span class="glyphicon glyphicon-shopping-cart"></span>
-                Mandar a carrito
-            </a>
-        </div>
-        </article>
-        <hr class="solid">
-
+            $sql = mysqli_query($link,"SELECT * FROM producto;");
+            while($row = mysqli_fetch_array($sql)) {
+                $nombre = $row[1];
+                $descripcion = $row[2];
+                $fotos = $row[3];
+                $precio = $row[4];
+                $fabricante = $row[6];
+                $cantidad = $row[5];
+                if ($cantidad>=1){
+                    echo "<article class='tema clearfix'>";
+                    echo "   <a href=\"tienda.php\" class=\"thumb pull-left\">";
+                    echo "   <img src=". $fotos ." alt='Precision_Bass' class='img-thumbnail' id='precision'>";
+                    echo "   </a>";
+                    echo "<h3 class = \"producto\">" . $nombre ." </h3>";
+                    echo "<p class=\"post-cpntenido text-justify\">";
+                    echo  $descripcion;
+                    echo "</p>";
+                    echo "<h3 class=\"text-right\">$". $precio . "MXN</h3>";
+                    echo "<em>Fabricante: <strong>". $fabricante ."</strong> </em>";
+                    echo "<div class=\"contenedor-botones text-right\">";
+                    echo "<a href=\"carro.php\" class=\"btn btn-primary\">";
+                    echo "   <span class=\"glyphicon glyphicon-shopping-cart\"></span>";
+                    echo "   Mandar a carrito";
+                    echo "</a>";
+                    echo "</div>";
+                    echo "</article>";
+                    echo "<hr class=\"solid\">";
+                }
+            }
+            mysqli_close($link);   
+            ?>
+      
     </section>
     
 

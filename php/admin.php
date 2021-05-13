@@ -84,16 +84,47 @@
    <div class="main container">
         <h1 class="titulo">Bienvenido Administrador</h1><br>
 
-        <div class="containecontainerr">
+        <div class="container">
             <h3 style="text-align: center;">Historial de compras</h3>
             <table class="table">
                 <thead>
-                    <th>Producto</th>
-                    <th>Fabricante</th>
+                    <th >Usuario</th>
+                    <th >Producto</th>
                     <th>Precio</th>
-                    <th>Cantidad</th>
                 </thead>
+<?php
+       $user = 'root';
+       $password = 'root';
+       $db = 'my_db';
+       $host = 'localhost';
+       $port = 3306;
+    
+       $link = mysqli_init();
+       $success = mysqli_real_connect(
+          $link, 
+          $host, 
+          $user, 
+          $password, 
+          $db,
+          $port
+       ); 
+       
+       $sql = mysqli_query($link,'SELECT email, nombre_producto, precio 
+                            FROM usuario AS u, producto AS p, historial AS h 
+                            WHERE h.id_producto = p.id_producto AND h.id_usuario = u.id_usuario;');
+       while($row = mysqli_fetch_array($sql)){
+            echo "<tr>";
+            echo "<td>". $row['email'] ."</td>";
+            echo "<td>". $row['nombre_producto'] ."</td>";
+            echo "<td>$". $row['precio'] ."</td>";
+            echo "</tr>";
+       }
+
+       mysqli_close($link);
+
+       ?>
             </table>
+    
         </div>
         
 
@@ -124,5 +155,6 @@
         </div>
     </div>
    
+
 </body>
 </html>
