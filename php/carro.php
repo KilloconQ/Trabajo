@@ -82,15 +82,19 @@
    </nav>
    <section class = 'main container'>
     <?php
-        if($_SERVER["REQUEST_METHOD"]=="POST"){
-            $nombre = $_POST['nombre']; 
+        if($_SERVER["REQUEST_METHOD"]=="GET"){
+            $nombre = $_GET['nombre']; 
             echo "<article class='clearfix'>";
-            echo "<p style='text-align:center;'>$nombre</p>";
+            echo "<span><p>$nombre</p></li>";
+            echo "<form method=\"post\" action=\"finalizar.php\">";
+            echo "<input type='number' name = 'cantidad' value = '1' >";
+            echo "<input type='submit' value='Comprar'>";
+            echo "</form></span>";
             echo "</article>";
-            echo "<hr class='solid'>";
         }
+        $nombre = "";
     ?> 
-
+            
 
 
     </section>

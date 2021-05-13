@@ -15,43 +15,6 @@
     <link rel="shortcut icon" type="image/png" href="../images/favicon.ico">
 </head>
 <body>
-<?php
-/*
-$user = 'root';
-$password = 'root';
-$db = 'my_db';
-$host = 'localhost';
-$port = 3306;
-
-$link = mysqli_init();
-$success = mysqli_real_connect(
-   $link, 
-   $host, 
-   $user, 
-   $password, 
-   $db,
-   $port
-);  
-
-$nombre = $descripcion = $fotos = $fabricante = "";
-$precio = 0;
-$query = "SELECT * FROM producto";
-$execute = mysqli_query($link, $query);
-
-if($row = mysqli_fetch_array($execute)){
-    $nombre = $row[1];
-    $descripcion = $row[2];
-    $fotos = $row[3];
-    $precio = $row[4];
-    $fabricante = $row[6];
-}
-/*echo "<p>$nombre</p>";
-echo "<p>$descripcion</p>";
-echo "<p>$fotos</p>";
-echo "<p>$fabricante</p>";
-echo "<p>$precio</p>";*/
-
-?>
     <div class = "container-fluid cabecera" style = "height:200px">
     <div class="container">    
         <h1 class="titulo">BASS Clef</h1>
@@ -157,7 +120,7 @@ echo "<p>$precio</p>";*/
                     echo "<h3 class=\"text-right\">$". $precio . "MXN</h3>";
                     echo "<em>Fabricante: <strong>". $fabricante ."</strong> </em>";
                     echo "<div class=\"text-right\">";
-                    echo "<form method=\"post\" action=\"carro.php\" >";
+                    echo "<form method=\"get\" action=\"carro.php\" >";
                     echo "  <input type='hidden' value='$nombre' name='nombre'>";
                     echo "  <input type='submit' href=\"carro.php\" class=\"btn btn-primary\" value='Mandar a carrito'>";
                     echo " </input>";
