@@ -80,9 +80,21 @@
         </div>
     </div>
    </nav>
-   <?php
+   <section class = 'main container'>
+    <?php
+        if($_SERVER["REQUEST_METHOD"]=="POST"){
+            $nombre = $_POST['nombre']; 
+            echo "<article class='clearfix'>";
+            echo "<p style='text-align:center;'>$nombre</p>";
+            echo "</article>";
+            echo "<hr class='solid'>";
+        }
+    ?> 
+
+
+
+    </section>
    
-   ?> 
    
 </body>
 </html>

@@ -147,8 +147,8 @@ echo "<p>$precio</p>";*/
                 $cantidad = $row[5];
                 if ($cantidad>=1){
                     echo "<article class='tema clearfix'>";
-                    echo "   <a href=\"tienda.php\" class=\"thumb pull-left\">";
-                    echo "   <img src=". $fotos ." class='img-thumbnail' id='precision'>";
+                    echo "   <a class=\"thumb pull-left\">";
+                    echo "   <img src=". $fotos ." class='img-thumbnail'>";
                     echo "   </a>";
                     echo "<h3 class = \"producto\">" . $nombre ." </h3>";
                     echo "<p class=\"post-contenido text-justify\">";
@@ -157,8 +157,9 @@ echo "<p>$precio</p>";*/
                     echo "<h3 class=\"text-right\">$". $precio . "MXN</h3>";
                     echo "<em>Fabricante: <strong>". $fabricante ."</strong> </em>";
                     echo "<div class=\"text-right\">";
-                    echo "<form method=\"post\" action=\"carro.php\" id=\"pasar_info\">";
-                    echo "  <input href=\"carro.php\" class=\"btn btn-primary\" value='Mandar a carrito'>";
+                    echo "<form method=\"post\" action=\"carro.php\" >";
+                    echo "  <input type='hidden' value='$nombre' name='nombre'>";
+                    echo "  <input type='submit' href=\"carro.php\" class=\"btn btn-primary\" value='Mandar a carrito'>";
                     echo " </input>";
                     echo "</form>";
                     echo "</div>";
