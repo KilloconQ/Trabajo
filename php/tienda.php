@@ -33,6 +33,23 @@ $success = mysqli_real_connect(
    $port
 );  
 
+$nombre = $descripcion = $fotos = $fabricante = "";
+$precio = 0;
+$query = "SELECT * FROM producto";
+$execute = mysqli_query($link, $query);
+
+if($row = mysqli_fetch_array($execute)){
+    $nombre = $row[1];
+    $descripcion = $row[2];
+    $fotos = $row[3];
+    $precio = $row[4];
+    $fabricante = $row[6];
+}
+/*echo "<p>$nombre</p>";
+echo "<p>$descripcion</p>";
+echo "<p>$fotos</p>";
+echo "<p>$fabricante</p>";
+echo "<p>$precio</p>";*/
 
 ?>
     <div class = "container-fluid cabecera" style = "height:200px">
@@ -102,14 +119,14 @@ $success = mysqli_real_connect(
     <section class="main container">
       <article class="tema clearfix">
       <a href="#" class="thumb pull-left">
-          <img src="../images/precision_bass.jpg" alt="Precision_Bass" class="img-thumbnail" id="precision">
+          <img src="<?php echo $fotos;?>" alt="Precision_Bass" class="img-thumbnail" id="precision">
       </a>
-      <h3 class = "producto"> Precision Bass </h3>
+      <h3 class = "producto"> <?php echo $nombre;?> </h3>
       <p class="post-cpntenido text-justify">
-          Un verdadero icono desde su creación en 1951, usado por miles de bajistas alrededor del mundo. Este modelo fabricado en México, es el más asequible de la marca, 
-          pero sin sacrificar el sonido característico en el proceso.
+          <? echo $descripcion; ?>
       </p>
-      <em>Fabricante: <strong>Fender</strong> </em>
+      <h3 class="text-right">$ <?php echo $precio;?> MXN</h3>
+      <em>Fabricante: <strong><?php echo $fabricante;?></strong> </em>
       <div class="contenedor-botones text-right">
             <a href="carro.php" class="btn btn-primary">
                 <span class="glyphicon glyphicon-shopping-cart"></span>
@@ -128,6 +145,7 @@ $success = mysqli_real_connect(
           Un verdadero icono desde su creación en 1951, usado por miles de bajistas alrededor del mundo. Este modelo fabricado en México, es el más asequible de la marca, 
           pero sin sacrificar el sonido característico en el proceso.
       </p>
+      <h3 class="text-right">$20,000</h3>
       <em>Fabricante: <strong>Fender</strong> </em>
       <div class="contenedor-botones text-right">
             <a href="carro.php" class="btn btn-primary">
@@ -147,6 +165,7 @@ $success = mysqli_real_connect(
           Un verdadero icono desde su creación en 1951, usado por miles de bajistas alrededor del mundo. Este modelo fabricado en México, es el más asequible de la marca, 
           pero sin sacrificar el sonido característico en el proceso.
       </p>
+      <h3 class="text-right">$20,000</h3>
       <em>Fabricante: <strong>Fender</strong> </em>
       <div class="contenedor-botones text-right">
             <a href="carro.php" class="btn btn-primary">
@@ -166,6 +185,7 @@ $success = mysqli_real_connect(
           Un verdadero icono desde su creación en 1951, usado por miles de bajistas alrededor del mundo. Este modelo fabricado en México, es el más asequible de la marca, 
           pero sin sacrificar el sonido característico en el proceso.
       </p>
+      <h3 class="text-right">$20,000</h3>
       <em>Fabricante: <strong>Fender</strong> </em>
       <div class="contenedor-botones text-right">
             <a href="carro.php" class="btn btn-primary">
@@ -185,6 +205,7 @@ $success = mysqli_real_connect(
           Un verdadero icono desde su creación en 1951, usado por miles de bajistas alrededor del mundo. Este modelo fabricado en México, es el más asequible de la marca, 
           pero sin sacrificar el sonido característico en el proceso.
       </p>
+      <h3 class="text-right">$20,000</h3>
       <em>Fabricante: <strong>Fender</strong> </em>
       <div class="contenedor-botones text-right">
             <a href="carro.php" class="btn btn-primary">
