@@ -128,11 +128,11 @@
         </div>
         
 
-        <hr >
+        <hr class="solid">
 
         <div class="container">
             <h3 style="text-align: center;">Añadir producto</h3>
-                <form action="#" method="post" id="add_form">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="add_form">
                     <div class="form-group">
                         <label for="Nombre de Producto">Nombre de producto</label>
                         <input type="text" class="form-control" id="nombre_producto" name="nombre_producto"  required>
@@ -142,11 +142,9 @@
                         <input type="text" class="form-control" id="descripcion" name="descripcion"  required>
                     </div>
                     <div class="form-group">
-                        <label for="Fabricante">Imagen (introduce liga a foto ej: ../images/ejemplo.jpg)</label>
+                        <label for="Imagen">Imagen (../images/ejemplo.jpg)</label>
                         <input type="text" class="form-control" id="imagenes" name="imagenes"  required>
-                    </div>
-                    <div class="form-group">
-                        <label for="Precio">Precio</label>
+                    </div> <div class="form-group"> <label for="Precio">Precio</label>
                         <input type="number" class="form-control" id="precio" name="precio"  required>
                     </div>
                     <div class="form-group">
@@ -155,16 +153,63 @@
                     </div>
                     <div class="form-group">
                         <label for="Fabricante">Fabricante</label>
-                        <input type="text" class="form-control" id="fabricante" name="fabricante" placeholder="Fabricante" required>
+                        <input type="text" class="form-control" id="fabricante" name="fabricante"  required>
                     </div>
                     <div class="form-group">
                         <label for="Origen">Origen</label>
-                        <input type="text" class="form-control" id="origen" name="origen" placeholder="Origen" required>
+                        <input type="text" class="form-control" id="origen" name="origen"  required>
                     </div>
                     <input type="submit" name="submit" class="submit btn btn-success" value="Añadir" id="submit_data" />   
                 </form>
         </div>
     </div>
+    <?php
+       $user = 'root';
+       $password = 'root';
+       $db = 'my_db';
+       $host = 'localhost';
+       $port = 3306;
+    
+       $link = mysqli_init();
+       $success = mysqli_real_connect(
+          $link, 
+          $host, 
+          $user, 
+          $password, 
+          $db,
+          $port
+       ); 
+        $nombre_producto = $descripcion = $imagen = $fabricante = $origen = "";
+        $precio = $cantidad = 0;
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $nombre_producto= mysqli_real_escape_string($link, $_POST['nombre_producto']);
+        $descripcion= mysqli_real_escape_string($link,$_POST['descripcion']); 
+        $imagen= mysqli_real_escape_string($link,$_POST['imagenes']);
+        $precio= mysqli_real_escape_string($link, $_POST['precio']);
+        $cantidad= mysqli_real_escape_string($link, $_POST['cantidad']);
+        $fabricante= mysqli_real_escape_string($link, $_POST['fabricante']);
+        $origen= mysqli_real_escape_string($link, $_POST['origen']);
+        $sql = mysqli_query($link,"SELECT nombre_producto FROM producto WHERE nombre_producto = '$nombre_producto'");
+        $sql2 = mysqli_query($link, "SELECT id_producto, cantidad FROM producto WHERE nombre_producto = '$nombre_producto'");
+       if(mysqli_num_rows($sql) > 0){
+            $row = mysqli_fetch_array($sql2);
+            $id_producto = $row['id_producto'];
+            $cantidad = $cantidad + $row['cantidad'];          
+            $update = "UPDATE my_db.producto
+                        SET cantidad = $cantidad 
+                        WHERE id_producto = $id_producto";
+                        echo "Entre a if";
+            if(!mysqli_query($link, $update)) {die('Error: ' . mysqli_error($link));}
+        }else{                                
+            $insert = "INSERT INTO my_db.producto
+                        (nombre_producto, descripcion, fotos, precio, cantidad, fabricante, origen)
+                        VALUES('$nombre_producto', '$descripcion', '$imagen', $precio, $cantidad, '$fabricante', '$origen');" ;
+                        echo "Entre a else";
+            if(!mysqli_query($link, $insert)) {die('Error: ' . mysqli_error($link));}
+        }
+        }
+        mysqli_close($link);
+    ?>
    
 
 </body>
