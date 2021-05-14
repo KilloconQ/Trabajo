@@ -1,6 +1,9 @@
 <?php
     //Inicio de sesion
     session_start();
+
+    $_SESSION['logged_in_user_id']='1';
+    $_SESSION
 ?>
 
 
@@ -113,11 +116,13 @@
       $db,
       $port
    );
+
    if(mysqli_connect_errno()){
      echo "Failed to connect to MySQL:".mysqli_connect_error();
    }
 
-   $sql = mysqli_query($link,"SELECT nombre");
+
+
 ?> 
 </body>
 </html>
